@@ -1,12 +1,12 @@
 import {Submission} from "../../domain/entities/submission";
 
 type CreateChallengeSubmissionRequest = {
-    userId: string;
+    studentId: string;
     challengeId: string
 }
 
-class CreateChallengeSubmission {
-    execute({ userId, challengeId }: CreateChallengeSubmissionRequest) {
+export class CreateChallengeSubmission {
+    execute({ studentId, challengeId }: CreateChallengeSubmissionRequest) {
         const submission = Submission.create({
             studentId,
             challengeId,
